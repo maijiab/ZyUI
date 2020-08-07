@@ -1,0 +1,101 @@
+{
+	"easycom": {
+		"^zy-(.*)": "zy-ui/components/zy-$1/zy-$1.vue"
+	},
+	
+	"pages": [ 
+		{
+			"path": "pages/example/components",
+			"style": {
+				"navigationBarTitleText": "组件"
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/componentsA",
+			"pages": [
+				{
+					"path": "lazyLoad/index",
+					"style": {
+						"navigationBarTitleText": "lazyLoad-懒加载"
+					}
+				}
+			]
+		},	
+		{
+			"root": "pages/componentsC",
+			"pages": [
+				{
+					"path": "color/index",
+					"style": {
+						"navigationBarTitleText": "color-颜色"
+					}
+				},	
+				{
+					"path": "button/index",
+					"style": {
+						"navigationBarTitleText": "button-按钮"
+					}
+				},{
+					"path": "subsection/index",
+					"style": {
+						"navigationBarTitleText": "subsection-分段器"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/componentsB",
+			"pages": [
+				{
+					"path": "waterfall/index",
+					"style": {
+						"navigationBarTitleText": "tabbar-底部导航栏"
+					}
+				},
+				{
+					"path": "loading/index",
+					"style": {
+						"navigationBarTitleText": "loading-加载"
+					}
+				},
+				{
+					"path": "skeleton/index",
+					"style": {
+						"navigationBarTitleText": "skeleton-骨架屏"
+					}
+				},
+				{
+					"path": "sticky/index",
+					"style": {
+						"navigationBarTitleText": "sticky-吸顶"
+					}
+				},
+				{
+					"path": "swipeAction/index",
+					"style": {
+						"navigationBarTitleText": "swipeAction-左滑删除"
+					}
+				}
+			]
+		}		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition" : {
+		"current": 0, 
+		"list": [
+			{
+				"name": "", 
+				"path": "pages/componentsB/swipeAction/index", 
+				"query": "" 
+			}
+		]
+	}
+	
+}

@@ -1,0 +1,38 @@
+// 此文件为uView的主题变量，这些变量目前只能通过uni.scss引入才有效，另外由于
+// uni.scss中引入的样式会同时混入到全局样式文件和单独每一个页面的样式中，造成微信程序包太大，
+// 故uni.scss只建议放scss变量名相关样式，其他的样式可以通过main.js或者App.vue引入
+
+$zy-main-color: #303133;
+$zy-content-color: #606266;
+$zy-tips-color: #909399;
+$zy-light-color: #c0c4cc;
+$zy-border-color: #e4e7ed;
+$zy-bg-color: #f3f4f6;
+
+$zy-type-primary: #2979ff;
+$zy-type-primary-light: #ecf5ff;
+$zy-type-primary-disabled: #a0cfff;
+$zy-type-primary-dark: #2b85e4;
+
+$zy-type-warning: #ff9900;
+$zy-type-warning-disabled: #fcbd71;
+$zy-type-warning-dark: #f29100;
+$zy-type-warning-light: #fdf6ec;
+
+$zy-type-success: #19be6b;
+$zy-type-success-disabled: #71d5a1;
+$zy-type-success-dark: #18b566;
+$zy-type-success-light: #dbf1e1;
+
+$zy-type-error: #fa3534;
+$zy-type-error-disabled: #fab6b6;
+$zy-type-error-dark: #dd6161;
+$zy-type-error-light: #fef0f0;
+
+$zy-type-info: #909399;
+$zy-type-info-disabled: #c8c9cc;
+$zy-type-info-dark: #82848a;
+$zy-type-info-light: #f4f4f5;
+
+$zy-form-item-height: 70rpx;
+$zy-form-item-border-color: #dcdfe6;

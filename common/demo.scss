@@ -1,0 +1,86 @@
+/* #ifndef APP-NVUE */
+view,
+text {
+	box-sizing: border-box;
+}
+/* #endif */
+
+/* start--演示页面使用的统一样式--start */
+.zy-demo {
+	padding: 50rpx 40rpx;
+}
+
+.zy-demo-wrap {
+	border-width: 1px;
+	border-color: #ddd;
+	border-style: dashed;
+	background-color: rgb(250, 250, 250);
+	padding: 40rpx 20rpx;
+	border-radius: 6px;
+}
+
+.zy-demo-area {
+	text-align: center;
+}
+
+.zy-no-demo-here {
+	color: $zy-tips-color;
+	font-size: 26rpx;
+}
+
+.zy-demo-result-line {
+	border-width: 1px;
+	border-color: #ddd;
+	border-style: dashed;
+	padding: 10rpx 40rpx;
+	margin-top: 30rpx;
+	border-radius: 5px;
+	background-color: rgb(240, 240, 240);
+	color: $zy-content-color;
+	font-size: 32rpx;
+	/* #ifndef APP-NVUE */
+	word-break: break-word;
+	display: inline-block;
+	/* #endif */
+	text-align: left;
+	
+}
+
+.zy-demo-title,
+.zy-config-title {
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: bold;
+	margin-bottom: 40rpx;
+}
+
+.zy-config-item {
+	margin-top: 50rpx;
+}
+
+.zy-config-title {
+	margin-top: 40rpx;
+	padding-bottom: 10rpx;
+}
+
+.zy-item-title {
+	position: relative;
+	font-size: 28rpx;
+	padding-left: 8px;
+	line-height: 1;
+	margin-bottom: 22rpx;
+}
+
+.zy-item-title:after {
+	position: absolute;
+	width: 4px;
+	top: -1px;
+	height: 16px;
+	/* #ifndef APP-NVUE */
+	content: '';
+	/* #endif */
+	left: 0;
+	border-radius: 10px;
+	background-color: $zy-content-color;
+}
+/* end--演示页面使用的统一样式--end */

@@ -1,0 +1,173 @@
+.zy-relative,
+.zy-rela {
+	position: relative;
+}
+
+.zy-absolute,
+.zy-abso {
+	position: absolute;
+}
+
+// nvue不能用标签命名样式，不能放在微信组件中，否则微信开发工具会报警告，无法使用标签名当做选择器
+/* #ifndef APP-NVUE */
+image {
+	display: inline-block;
+	// 解决图片加载时可能会瞬间变形的问题
+	will-change: transform;
+}
+
+// 在weex，也即nvue中，所有元素默认为border-box
+view,
+text {
+	box-sizing: border-box;
+}
+/* #endif */
+
+.zy-font-xs {
+	font-size: 22rpx;
+}
+
+.zy-font-sm {
+	font-size: 26rpx;
+}
+
+.zy-font-md {
+	font-size: 28rpx;
+}
+
+.zy-font-lg {
+	font-size: 30rpx;
+}
+
+.zy-font-xl {
+	font-size: 34rpx;
+}
+
+.zy-flex {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	flex-direction: row;
+	align-items: center;
+}
+
+.zy-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.zy-flex-nowrap {
+	flex-wrap: nowrap;
+}
+
+.zy-col-center {
+	align-items: center;
+}
+
+.zy-col-top {
+	align-items: flex-start;
+}
+
+.zy-col-bottom {
+	align-items: flex-end;
+}
+
+.zy-row-center {
+	justify-content: center;
+}
+
+.zy-row-left {
+	justify-content: flex-start;
+}
+
+.zy-row-right {
+	justify-content: flex-end;
+}
+
+.zy-row-between {
+	justify-content: space-between;
+}
+
+.zy-row-around {
+	justify-content: space-around;
+}
+
+.zy-text-left {
+	text-align: left;
+}
+
+.zy-text-center {
+	text-align: center;
+}
+
+.zy-text-right {
+	text-align: right;
+}
+
+.zy-flex-col {
+	/* #ifndef APP-NVUE */
+	display: flex;
+	/* #endif */
+	flex-direction: column;
+}
+
+// 定义flex等分
+@for $i from 0 through 12 {
+	.zy-flex-#{$i} {
+		flex: $i;
+	}
+}
+
+// 定义字体(px)单位，小于20都为px单位字体
+@for $i from 9 to 20 {
+	.zy-font-#{$i} {
+		font-size: $i + px;
+	}
+}
+
+// 定义字体(rpx)单位，大于或等于20的都为rpx单位字体
+@for $i from 20 through 40 {
+	.zy-font-#{$i} {
+		font-size: $i + rpx;
+	}
+}
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		// 得出：u-margin-30或者u-m-30
+		.zy-margin-#{$i}, .zy-m-#{$i} {
+			margin: $i + rpx!important;
+		}
+		
+		// 得出：u-padding-30或者u-p-30
+		.zy-padding-#{$i}, .zy-p-#{$i} {
+			padding: $i + rpx!important;
+		}
+		
+		@each $short, $long in l left, t top, r right, b bottom {
+			// 缩写版，结果如： u-m-l-30
+			// 定义外边距
+			.zy-m-#{$short}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.zy-p-#{$short}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+			
+			// 完整版，结果如：u-margin-left-30
+			// 定义外边距
+			.zy-margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + rpx!important;
+			}
+			
+			// 定义内边距
+			.zy-padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + rpx!important;
+			}
+		}
+	}
+}
+
