@@ -33,6 +33,12 @@
 					}
 				},	
 				{
+						"path": "countDown/index",
+						"style": {
+							"navigationBarTitleText": "countDown-倒计时"
+						}
+					},
+				{
 					"path": "button/index",
 					"style": {
 						"navigationBarTitleText": "button-按钮"
@@ -41,6 +47,12 @@
 					"path": "subsection/index",
 					"style": {
 						"navigationBarTitleText": "subsection-分段器"
+					}
+				},
+				{
+					"path": "progress/index",
+					"style": {
+						"navigationBarTitleText": "progress-进度条"
 					}
 				}
 			]
@@ -92,7 +104,7 @@
 		"list": [
 			{
 				"name": "", 
-				"path": "pages/componentsB/swipeAction/index", 
+				"path": "pages/componentsC/progress/index", 
 				"query": "" 
 			}
 		]

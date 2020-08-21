@@ -8,8 +8,8 @@
             loading?'zy-loading':'',
             shape == 'circle' ? 'zy-round-circle' : '',
             hairLine ? showHairLineBorder : 'zy-btn--bold-border',
-            'u-btn--' + type,
-            disabled ? `u-btn--${type}--disabled` : '',
+            'zy-btn--' + type,
+            disabled ? `zy-btn--${type}--disabled` : '',
         ]"
         :disabled="disabled"
         :loading="loading"
